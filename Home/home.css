@@ -1,0 +1,225 @@
+:root {
+    --primaryRed:(hsl(0, 100%, 74%));
+    --Green400:(hsl(154, 59%, 51%));
+    --Purple700:(hsl(248, 32%, 49%));
+    --Gray900:(hsl(249, 10%, 26%) );
+    --Purple350:(hsl(246, 25%, 77%));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hidden { 
+    display: none;
+}
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction:column;
+    font-family: Poppins, sans-serif;
+    background-color: rgba(219, 219, 219, 0.603);
+}
+
+.header{
+    background-color:rgba(4, 33, 85, 0.938);
+    padding: 5px;
+    width: 100%;
+}
+
+h1 {
+    color: white;
+    font-size:x-large;
+    text-align:center;
+    padding-bottom: 5px;
+
+
+}
+
+.nav-button{
+    display: flex;
+    justify-content:center ;
+    flex-direction:row;
+    gap: 5px;
+    padding-bottom: 20px;
+}
+
+.nav-btn {
+    width: 60px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: gray;
+    color: white;
+    font-weight: bold;
+}
+
+/* CREATE*/
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    min-height: 70vh;       
+}
+
+h2{
+    padding-bottom: 20px;
+}
+.crud-card {
+    height: auto;
+    width: 600px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.crud-card form,
+.update-card form {
+    display: flex;
+    flex-direction: column;
+    gap:6px;
+}
+
+.crud-card input,
+.update-card input
+{
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid #000;
+}
+
+.crud-card label,
+.update-card label{
+    font-size:small;
+    font-weight:500;
+}
+
+.botoes {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+
+.crud-card button,
+.update-card button {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    color: white;
+    background-color: rgba(4, 33, 85, 0.938);
+}
+
+.hidden {
+  display: none;
+}
+
+
+/*READ*/ 
+
+.read-card {
+    height: auto;
+    width: auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    width: min(95%, 1000px);
+    overflow-x: auto;  
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  overflow: hidden;  
+  border: 1px solid #aeaeaf;
+
+}
+
+th, td {
+    border: none;
+    border-right: 1px solid #aaa;
+    border-bottom: 1px solid #aaa; 
+}
+
+th:last-child,
+td:last-child {
+  border-right: none;
+  min-width: 190px;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+thead th {
+    padding: 1rem 1rem;
+    text-align: center;
+    border-collapse: collapse;
+    border: 1px solid  #aeaeaf;
+    background-color: rgba(0, 0, 255, 0.205);
+}
+
+tbody td {
+    text-align: center;
+    padding: 10px;
+    border-collapse: collapse;
+    border: 1px solid #aeaeaf;
+}
+
+.container-submit{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+}
+
+.container-submit button {
+    width: auto;
+    height: 30px;
+    gap: 10px;
+    padding: 10px;
+    white-space: nowrap;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #000;
+    color: white;
+    background-color: rgba(4, 33, 85, 0.938);
+    cursor: pointer;
+}
+
+
+
+/*UPDATE*/
+
+
+.update-card {
+    height: auto;
+    width: 600px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/*DELETE*/
+
+
+.delete-card {
+    height: auto;
+    width: auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+}

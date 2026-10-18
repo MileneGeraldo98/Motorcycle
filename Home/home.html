@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=League+Spartan:wght@100..900&family=Lexend+Deca:wght@100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./home.css">
+    <title>Home</title>
+</head>
+<body>
+    <header class="header">
+        <h1>CRUD</h1>
+
+        <nav class="nav-button">
+            <button class="nav-btn" data-page="create" id="btn-create">Create</button>
+            <button class="nav-btn" data-page="read" id="btn-read">Read</button>
+            <button class="nav-btn" data-page="update" id="btn-update">Update</button>
+            <button class="nav-btn" data-page="delete" id="btn-delete">Delete</button>
+        </nav>
+    </header>
+    <main>
+        <!-- CREATE -->
+        <div id="create-card" class="crud-card hidden">
+            <h2>Create</h2>
+
+            <form id="form-create">
+                <label for="marca">Marca</label>
+                <input type="text" id="marca" placeholder="Digite a marca">
+
+                <label for="modelo">Modelo</label>
+                <input type="text" id="modelo" placeholder="Digite o modelo">
+
+                <label for="cc">CC</label>
+                <input type="text" id="cc" placeholder="Digite o cc">
+
+                <label for="descricao">Descricao</label>
+                <input type="text" id="descricao" placeholder="Faca uma descricão">
+
+                <div class="botoes">
+                    <button type="submit">Salvar</button>
+                    <button type="reset">Limpar</button>
+                </div>
+            </form>
+        </div>
+
+        <!--READ-->
+        <div id="read-card" class="read-card hidden">
+            <h2>Read</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>CC</th>
+                        <th>Descrição</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody id="motos-body"></tbody>
+            </table>
+        </div>
+
+        <!-- UPDATE -->
+        <div id="update-card" class="update-card hidden">
+            <h2>Update</h2>
+
+            <form id="form-update">
+                <label for="marca">Marca</label>
+                <input type="text" id="up-marca" placeholder="Digite a marca">
+
+                <label for="modelo">Modelo</label>
+                <input type="text" id="up-modelo" placeholder="Digite o modelo">
+
+                <label for="cc">CC</label>
+                <input type="text" id="up-cc" placeholder="Digite o cc">
+
+                <label for="descricao">Descricao</label>
+                <input type="text" id="up-descricao" placeholder="Faca uma descricão">
+
+                <div class="botoes">
+                    <button type="submit">Editar</button>
+                    <button type="reset">Limpar</button>
+                </div>
+            </form>
+        </div>
+
+        <!--DELETE-->
+
+        <div id="delete-card" class="delete-card hidden">
+            <h2>Delete</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>CC</th>
+                        <th>Descrição</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody id="delete-body"></tbody>
+            </table>
+        </div>
+
+
+    </main>
+
+    <script src="./home.js"></script>
+</body>
+</html>
